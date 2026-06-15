@@ -12,6 +12,17 @@ fetch("https://opensheet.elk.sh/1SKotYYErxLQCxm9Y3VumQw07fl7DFklMaRM7bSVAcVg/She
         document.getElementById('list').innerHTML = "<h4>"+item["메추"]+"</h4>" + document.getElementById('list').innerHTML;
     })
   });
+
+fetch("https://opensheet.elk.sh/1SKotYYErxLQCxm9Y3VumQw07fl7DFklMaRM7bSVAcVg/Sheet2")
+  .then(res => res.json())
+  .then(data => {
+        data.forEach(item => {
+        console.log(item);
+        yarr = data.map(item => Number(Object.values(item)[0]));
+        document.getElementById('paylist').innerHTML = "<h4>"+item["수금"]+"</h4>" + document.getElementById('paylist').innerHTML;
+    })
+  });
+
 function fi(){
     setTimeout(function(){
         fo();
