@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>돈쓴</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .scroll{
+            width: 250px;
+            height: 200px;
+            overflow-y: auto;
+
+            margin: 0 auto;
+            border: solid;
+            border-radius: 5px;
+            border-width: 3px;
+        }
+    </style>
+    <script src="donson.js"></script>
+</head>
+<body>
+    <h1>우리가쓴돈계산하기</h1>
+    <br>
+    <h2>내역</h2>
+    <div class="scroll" id="list">
+    </div>
+    <input type="text" id="mechu" placeholder="이름/값">
+    <input type="button" onclick="mechu();" value="돈쓴">
+    <h3>총액: ₩<span id="dason"></span></h3>
+    <h3>남은: ₩<span id="namon"></span></h3>
+    <h3>인당남은: ₩<span id="invnamon"></span></h3>
+</body>
+</html>
