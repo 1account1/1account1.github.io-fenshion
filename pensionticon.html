@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>카카오톡 이모티콘샵 클론</title>
+    <title>메추샵</title>
     <!-- 구글 폰트 & 아이콘 로드 -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -285,13 +285,11 @@
     <header>
         <div class="header-container">
             <div class="logo-area">
-                <div class="logo-box">kakao</div>
-                <span>이모티콘샵</span>
+                <span>메추샵</span>
             </div>
             
             <div class="search-bar">
-                <input type="text" placeholder="이모티콘을 검색해보세요">
-                <span class="material-symbols-out-lined search-icon">search</span>
+                <input type="text" placeholder="검색은 안되고 그냥 장식입니다">
             </div>
 
             <div class="header-menu">
@@ -303,119 +301,40 @@
     <!-- 메인 탭 네비게이션 -->
     <nav class="main-nav">
         <div class="nav-item active">홈</div>
-        <div class="nav-item">인기</div>
-        <div class="nav-item">신규</div>
-        <div class="nav-item">스타일</div>
+        <div class="nav-item" onclick="alert('인기 없는되?')">인기</div>
     </nav>
 
     <!-- 메인 컨텐츠 -->
     <main>
-        <!-- 메인 이벤트 배너 -->
-        <section class="banner-slider">
-            <div class="banner-text">
-                <h2>이번 주 가장 핫한<br>신상 이모티콘 만나보기</h2>
-                <p>지금 구매하면 특별 할인 쿠폰 증정!</p>
-            </div>
-            <div class="banner-img">🎉</div>
-        </section>
 
         <!-- 주목받는 이모티콘 섹션 -->
         <section>
             <div class="section-title">
-                <h3>요즘 주목받는 이모티콘</h3>
-                <a href="#" class="more">전체보기</a>
+                <h3>이모티콘</h3>
+                <a href="https://www.google.com/search?sca_esv=3c3eda1713c91f80&sxsrf=APpeQntablgECMPeDJdNb0TJGP5Uzs1tYA:1783837211396&udm=2&fbs=ABfTbFVyMZGZf1hfvX9uKjN_-G8c4u0nXx4bEIpwm1lnNH832QGGMdFXpDyzkQgEdtB8w9zZ67Faapx8wIWp8O3JpX8ZbooJTg6IC0i9eLmD380spG6aLHYWmiIL-SehB9tEHFuxn7V4s9NE-Nwvl-LiFJV1P9cjajKaS09GkFqD-niohmW1j3oiiITXIHg6NW--ImJLJZjv74RUylwcchtJHqLycsYz_Q&q=%EC%A0%84%EC%B2%B4&sa=X&ved=2ahUKEwiT18m6v8yVAxWaa_UHHd9RF8sQtKgLegQIExAB&biw=1280&bih=626&dpr=2" class="more">전체보기</a>
             </div>
 
             <div class="emoticon-grid">
                 <!-- 아이템 1 -->
-                <div class="emoticon-card">
-                    <div class="img-wrap">🐻</div>
+                <div class="emoticon-card"><a href="penti.html">
+                    <div class="img-wrap"><img id="pv" src="penti/fuckyou.png" width="80%" alt=""></div>
                     <div class="emoticon-info">
-                        <div class="title">둥글둥글 곰돌이의 하루</div>
-                        <div class="author">스튜디오 곰</div>
-                    </div>
+                        <div class="title">펜티 시즌1</div>
+                        <div class="author">명진구스튜디오</div>
+                    </div></a>
                 </div>
                 <!-- 아이템 2 -->
-                <div class="emoticon-card">
-                    <div class="img-wrap">🐱</div>
+                <div class="emoticon-card"><a href="pentii.html">
+                    <div class="img-wrap"><img id="pv" src="pentii/sunpraise.png" width="80%" alt=""></div>
                     <div class="emoticon-info">
-                        <div class="title">야옹이는 참지않아! 2</div>
-                        <div class="author">네오캣</div>
-                    </div>
+                        <div class="title">펜티 시즌2</div>
+                        <div class="author">명진구스튜디오</div>
+                    </div></a>
                 </div>
-                <!-- 아이템 3 -->
-                <div class="emoticon-card">
-                    <div class="img-wrap">🐰</div>
-                    <div class="emoticon-info">
-                        <div class="title">귀염뽀짝 토끼 콘</div>
-                        <div class="author">민트래빗</div>
-                    </div>
-                </div>
-                <!-- 아이템 4 -->
-                <div class="emoticon-card">
-                    <div class="img-wrap">🐥</div>
-                    <div class="emoticon-info">
-                        <div class="title">킹받는 삐약이 일상</div>
-                        <div class="author">쵸코쿠키</div>
-                    </div>
-                </div>
-                <!-- 아이템 5 -->
-                <div class="emoticon-card">
-                    <div class="img-wrap">🐶</div>
-                    <div class="emoticon-info">
-                        <div class="title">바둑이는 멍멍해</div>
-                        <div class="author">댕댕패밀리</div>
-                    </div>
-                </div>
-                <!-- 아이템 6 -->
-                <div class="emoticon-card">
-                    <div class="img-wrap">🐹</div>
-                    <div class="emoticon-info">
-                        <div class="title">쫀득쫀득 햄찌</div>
-                        <div class="author">모찌마을</div>
-                    </div>
-                </div>
-            </div>
         </section>
 
         <!-- 실시간 인기 섹션 -->
-        <section>
-            <div class="section-title">
-                <h3>실시간 인기 이모티콘</h3>
-                <a href="#" class="more">전체보기</a>
-            </div>
-
-            <div class="emoticon-grid">
-                <div class="emoticon-card">
-                    <div class="img-wrap">🦊</div>
-                    <div class="emoticon-info">
-                        <div class="title">속은 부드러운 겉바속촉 여우</div>
-                        <div class="author">젤리포</div>
-                    </div>
-                </div>
-                <div class="emoticon-card">
-                    <div class="img-wrap">🐸</div>
-                    <div class="emoticon-info">
-                        <div class="title">차분하게 킹받게 하는 개구리</div>
-                        <div class="author">FrogKing</div>
-                    </div>
-                </div>
-                <div class="emoticon-card">
-                    <div class="img-wrap">🐼</div>
-                    <div class="emoticon-info">
-                        <div class="title">뒹굴뒹굴 판다의 게으른 삶</div>
-                        <div class="author">대나무숲</div>
-                    </div>
-                </div>
-                <div class="emoticon-card">
-                    <div class="img-wrap">🦁</div>
-                    <div class="emoticon-info">
-                        <div class="title">둥근갈기 사자둥이</div>
-                        <div class="author">밀크티</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
     </main>
 
     <!-- 간단한 탭 전환 인터랙션 JS -->
