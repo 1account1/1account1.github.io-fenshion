@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>펜션360도로 보기</title>
     <script>
+        let vidd = 0;
+        function loop(){
+            setTimeout(() => {
+                vidd += 0.05;
+                if (vidd > 6.8){
+                    vidd = 0;
+                }
+                document.getElementById('vid').currentTime = vidd;
+                loop();
+            }, 50);
+        }
         document.addEventListener("DOMContentLoaded", function (){
             document.getElementById('vid').height = window.innerHeight;
+            loop();
         })
-        document.addEventListener('mousemove', (event) => {
-            //console.log(`X: ${event.clientX}, Y: ${event.clientY}`);
-            //console.log(window.innerWidth);
-            if(window.innerWidth/2 - event.clientX < 0){
-                document.getElementById('vid').currentTime = 3.5 / window.innerHeight *(-(window.innerWidth/2 - event.clientX));
-            }else{
-                document.getElementById('vid').currentTime = 3.5 + (3.5 / window.innerHeight *(event.clientX));
-            }
-        });
     </script>
     <style>
         body{
