@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>펜션360도로 보기</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (){
+            document.getElementById('vid').height = window.innerHeight;
+        })
+        document.addEventListener('pointermove', (event) => {
+            //console.log(`X: ${event.clientX}, Y: ${event.clientY}`);
+            //console.log(window.innerWidth);
+            if(window.innerWidth/2 - event.clientX < 0){
+                document.getElementById('vid').currentTime = 3.5 / window.innerHeight *(-(window.innerWidth/2 - event.clientX));
+            }else{
+                document.getElementById('vid').currentTime = 3.5 + (3.5 / window.innerHeight *(event.clientX));
+            }
+        });
+    </script>
+    <style>
+        body{
+            margin: 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <video id="vid" height="100" src="Video.mov"></video>
+</body>
+</html>
