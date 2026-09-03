@@ -39,7 +39,6 @@ function fo(){
         }
     }, 50);
 }
-
 async function mechu() {
     const value = document.getElementById("mechu").value;
     if (value.includes("경민")){
@@ -70,3 +69,9 @@ async function mechu() {
     }
 }
 
+
+document.getElementById("mechu").addEventListener('keypress', function(e){
+  if (e.key == 'Enter') {
+    mechu();
+  }
+})
