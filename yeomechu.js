@@ -41,10 +41,10 @@ function fo(){
 }
 async function mechu() {
     const value = document.getElementById("mechu").value;
-    if (value.includes("경민")){
+    if (value.replace(/[^a-zA-Z0-9]/g, "").includes("경민")){
         alert("응아니야")
     }
-    if (value.includes("경민") == false){
+    if (value.replace(/[^a-zA-Z0-9]/g, "").includes("경민") == false){
         document.getElementById('list').innerHTML = "<h3>"+value+"</h3>" + document.getElementById('list').innerHTML;
         document.getElementById('yahho').style.opacity = 1;
         fi();
