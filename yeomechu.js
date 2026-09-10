@@ -9,7 +9,7 @@ fetch("https://opensheet.elk.sh/1SKotYYErxLQCxm9Y3VumQw07fl7DFklMaRM7bSVAcVg/She
         data.forEach(item => {
         console.log(item);
         yarr = data.map(item => Number(Object.values(item)[0]));
-        if(item["메추"].includes("youtube.com"){
+        if(item["메추"].includes("youtube.com")){
               document.getElementById('list').innerHTML = '<iframe width="300" src="'+item["메추"]+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' + document.getElementById('list').innerHTML;
         }else{
               document.getElementById('list').innerHTML = "<h4>"+item["메추"]+"</h4>" + document.getElementById('list').innerHTML;
