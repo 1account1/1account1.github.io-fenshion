@@ -9,14 +9,18 @@ fetch("https://opensheet.elk.sh/1SKotYYErxLQCxm9Y3VumQw07fl7DFklMaRM7bSVAcVg/She
         data.forEach(item => {
         console.log(item);
         yarr = data.map(item => Number(Object.values(item)[0]));
-        if(item["메추"].includes("/shorts/")){
-              document.getElementById('list').innerHTML = '<iframe width="130" height="231" src="https://www.youtube.com/embed/'+item["메추"].split("/")[4]+'?si=BXD4-GXlK7HKm7vi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>' + document.getElementById('list').innerHTML;
+        if(item["메추"].includes("instagram.com")){
+            document.getElementById('list').innerHTML = '<iframe width="130" height="271" src="https://www.instagram.com/reel/'+item["메추"].split("/")[4]+'/embed" title="Instagram video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>' + document.getElementById('list').innerHTML;
         }else{
-              if(item["메추"].includes("youtube.com")){
+            if(item["메추"].includes("/shorts/")){
+                document.getElementById('list').innerHTML = '<iframe width="130" height="231" src="https://www.youtube.com/embed/'+item["메추"].split("/")[4]+'?si=BXD4-GXlK7HKm7vi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>' + document.getElementById('list').innerHTML;
+            }else{
+                if(item["메추"].includes("youtube.com")){
                     document.getElementById('list').innerHTML = '<iframe width="300" src="https://www.youtube.com/embed/'+item["메추"].split("=")[1]+'?si=BXD4-GXlK7HKm7vi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>' + document.getElementById('list').innerHTML;
-              }else{
+                }else{
                     document.getElementById('list').innerHTML = "<h4>"+item["메추"]+"</h4>" + document.getElementById('list').innerHTML;
-              }
+                }
+            }
         }
     })
   });
@@ -53,14 +57,18 @@ async function mechu() {
         alert("응아니야")
     }
     if (value.replace(/[^a-zA-Z0-9]/g, "").includes("경민") == false){
-        if(value.includes("/shorts/")){
-              document.getElementById('list').innerHTML = '<iframe width="130" height="231" src="https://www.youtube.com/embed/'+value.split("/")[4]+'?si=BXD4-GXlK7HKm7vi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>' + document.getElementById('list').innerHTML;
+        if(value.includes("instagram.com")){
+            document.getElementById('list').innerHTML = '<iframe width="130" height="271" src="https://www.instagram.com/reel/'+value.split("/")[4]+'/embed" title="Instagram video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>' + document.getElementById('list').innerHTML;
         }else{
-              if(value.includes("youtube.com")){
-                    document.getElementById('list').innerHTML = '<iframe width="300" src="https://www.youtube.com/embed/'+value.split("=")[1]+'?si=BXD4-GXlK7HKm7vi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>' + document.getElementById('list').innerHTML;
-              }else{
-                    document.getElementById('list').innerHTML = "<h3>"+value+"</h3>" + document.getElementById('list').innerHTML;
-              }
+            if(value.includes("/shorts/")){
+                document.getElementById('list').innerHTML = '<iframe width="130" height="231" src="https://www.youtube.com/embed/'+value.split("/")[4]+'?si=BXD4-GXlK7HKm7vi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>' + document.getElementById('list').innerHTML;
+            }else{
+                if(value.includes("youtube.com")){
+                        document.getElementById('list').innerHTML = '<iframe width="300" src="https://www.youtube.com/embed/'+value.split("=")[1]+'?si=BXD4-GXlK7HKm7vi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>' + document.getElementById('list').innerHTML;
+                }else{
+                        document.getElementById('list').innerHTML = "<h3>"+value+"</h3>" + document.getElementById('list').innerHTML;
+                }
+            }
         }
         //document.getElementById('list').innerHTML = "<h3>"+value+"</h3>" + document.getElementById('list').innerHTML;
         document.getElementById('yahho').style.opacity = 1;
