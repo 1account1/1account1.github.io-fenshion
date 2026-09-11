@@ -18,7 +18,11 @@ fetch("https://opensheet.elk.sh/1SKotYYErxLQCxm9Y3VumQw07fl7DFklMaRM7bSVAcVg/She
                 if(item["메추"].includes("youtube.com")){
                     document.getElementById('list').innerHTML = '<iframe width="300" src="https://www.youtube.com/embed/'+item["메추"].split("=")[1]+'?si=BXD4-GXlK7HKm7vi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>' + document.getElementById('list').innerHTML;
                 }else{
-                    document.getElementById('list').innerHTML = "<h4>"+item["메추"]+"</h4>" + document.getElementById('list').innerHTML;
+                    if(item["메추"].includes("youtu.be")){
+                        document.getElementById('list').innerHTML = '<iframe width="300" src="https://www.youtube.com/embed/'+item["메추"].split("/")[3].split("?")[0]+'?si=BXD4-GXlK7HKm7vi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>' + document.getElementById('list').innerHTML;
+                    }else{
+                        document.getElementById('list').innerHTML = "<h4>"+item["메추"]+"</h4>" + document.getElementById('list').innerHTML;
+                    }
                 }
             }
         }
@@ -66,7 +70,11 @@ async function mechu() {
                 if(value.includes("youtube.com")){
                         document.getElementById('list').innerHTML = '<iframe width="300" src="https://www.youtube.com/embed/'+value.split("=")[1]+'?si=BXD4-GXlK7HKm7vi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>' + document.getElementById('list').innerHTML;
                 }else{
+                    if(value.includes("youtu.be")){
+                        document.getElementById('list').innerHTML = '<iframe width="300" src="https://www.youtube.com/embed/'+value.split("/")[3].split("?")[0]+'?si=BXD4-GXlK7HKm7vi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>' + document.getElementById('list').innerHTML;
+                    }else{
                         document.getElementById('list').innerHTML = "<h3>"+value+"</h3>" + document.getElementById('list').innerHTML;
+                    }
                 }
             }
         }
